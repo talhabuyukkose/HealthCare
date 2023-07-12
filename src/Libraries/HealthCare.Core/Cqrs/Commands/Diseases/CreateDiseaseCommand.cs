@@ -1,13 +1,8 @@
 ﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Commands.Diseases
 {
-    public class CreateDiseaseCommand:IRequest<CreateDiseaseCommand>
+    public class CreateDiseaseCommand : IRequest<CreateDiseaseCommand>
     {
         public string Name { get; set; }
         public string Description { get; set; }

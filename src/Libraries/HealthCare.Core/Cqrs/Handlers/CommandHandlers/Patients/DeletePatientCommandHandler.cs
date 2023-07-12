@@ -32,9 +32,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients
             }
             var patient = await baseRepository.GetFindAsync(find => find.Id == request.Id);
 
-            var patientDto = mapper.Map<PatientDto>(patient);
-
-            return patientDto;
+            return mapper.Map<PatientDto>(patient);
         }
     }
 }

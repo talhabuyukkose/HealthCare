@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
 {
-    public class GetMedicalUnitIncludedQueryHandler : IRequestHandler<GetMedicalUnitIncludedQuery, ICollection<MedicalUnitIncludedDto>>
+    public class GetMedicalUnitIncludedQueryHandler : IRequestHandler<GetMedicalUnitsIncludedQuery, ICollection<MedicalUnitIncludedDto>>
     {
         private readonly ILogger<GetMedicalUnitIncludedQueryHandler> logger;
         private readonly IMedicalUnitRepository medicalUnitRepository;
@@ -27,14 +27,14 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
             this.medicalUnitRepository = medicalUnitRepository;
             this.mapper = mapper;
         }
-        public async Task<ICollection<MedicalUnitIncludedDto>> Handle(GetMedicalUnitIncludedQuery request, CancellationToken cancellationToken)
+        public async Task<ICollection<MedicalUnitIncludedDto>> Handle(GetMedicalUnitsIncludedQuery request, CancellationToken cancellationToken)
         {
             var repo = await medicalUnitRepository.GetIncludedAsync();
 
             if (repo == null)
             {
                 logger.LogError($"{nameof(medicalUnitRepository)} is turn null or empty");
-                throw new ArgumentException("Hasta listesi veritabanından getirilemedi");
+                throw new ArgumentException("Birim listesi veritabanından getirilemedi");
             }
 
             var _mapper = mapper.Map<ICollection<MedicalUnitIncludedDto>>(repo);

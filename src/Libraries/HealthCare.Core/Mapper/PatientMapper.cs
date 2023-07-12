@@ -12,10 +12,10 @@ namespace HealthCare.Core.Mapper
 {
     public class PatientMapper : Profile
     {
-        public PatientMapper() 
+        public PatientMapper()
         {
-            CreateMap<Patient,PatientDto>().ReverseMap();
-            CreateMap<Patient,PatientIncludedDto>().ReverseMap();
+            CreateMap<Patient, PatientDto>().ReverseMap();
+            CreateMap<Patient, PatientIncludedDto>().ReverseMap();
             CreateMap<Patient, CreatePatientCommand>().ReverseMap();
             CreateMap<Patient, UpdatePatientCommand>().ReverseMap();
         }

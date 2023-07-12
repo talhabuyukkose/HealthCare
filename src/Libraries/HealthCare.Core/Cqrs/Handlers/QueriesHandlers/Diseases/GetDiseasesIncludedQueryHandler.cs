@@ -26,7 +26,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Diseases
             if (repoDiseases == null)
             {
                 logger.LogError($"{nameof(diseaseRepository)} is turn null or empty");
-                throw new ArgumentException("Hasta listesi veritabanından getirilemedi");
+                throw new ArgumentException("Hastalık listesi veritabanından getirilemedi");
             }
 
             var mapperDiseases = mapper.Map<ICollection<DiseaseIncludedDto>>(repoDiseases);

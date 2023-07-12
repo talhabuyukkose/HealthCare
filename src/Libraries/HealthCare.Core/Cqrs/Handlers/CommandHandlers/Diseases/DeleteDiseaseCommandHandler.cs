@@ -14,7 +14,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Diseases
         private readonly IBaseRepository<Disease> baseRepository;
         private readonly IMapper mapper;
 
-        public DeleteDiseaseCommandHandler(ILogger<DeleteDiseaseCommandHandler> logger,IBaseRepository<Disease> baseRepository,IMapper mapper)
+        public DeleteDiseaseCommandHandler(ILogger<DeleteDiseaseCommandHandler> logger, IBaseRepository<Disease> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;

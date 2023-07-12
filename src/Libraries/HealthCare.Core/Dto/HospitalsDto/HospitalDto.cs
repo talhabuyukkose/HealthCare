@@ -17,7 +17,6 @@ namespace HealthCare.Core.Dto.HospitalsDto
         public string Region { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }
         public Status Status { get; set; }

@@ -34,9 +34,13 @@ namespace HealthCare.Persistance
             services.AddTransient<IBaseRepository<Doctor>, BaseRepository<Doctor>>();
             services.AddTransient<IBaseRepository<Disease>, BaseRepository<Disease>>();
             services.AddTransient<IBaseRepository<Appointment>, BaseRepository<Appointment>>();
+
             services.AddTransient<IPatientRepository, PatientRepository>();
-            services.AddTransient<IDiseaseRepository, DiseaseRepository>();
             services.AddTransient<IMedicalUnitRepository, MedicalUnitRepository>();
+            services.AddTransient<IHospitalRepository, HospitalRepository>();
+            services.AddTransient<IDoctorRepository,DoctorRepository>();
+            services.AddTransient<IAppointmentRepository, AppointmentRepository>();
+            services.AddTransient<IDiseaseRepository, DiseaseRepository>();
 
         }
     }

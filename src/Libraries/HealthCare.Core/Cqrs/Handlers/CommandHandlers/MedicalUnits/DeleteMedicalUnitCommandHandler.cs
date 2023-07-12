@@ -28,13 +28,11 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.MedicalUnits
             {
                 logger.LogInformation($"{request.Id} value is not here");
 
-                throw new ArgumentNullException(nameof(request), "Disease.Id bulunamadı");
+                throw new ArgumentNullException(nameof(request), "MedicalUnit.Id bulunamadı");
             }
             var medicalUnit = await baseRepository.GetFindAsync(find => find.Id == request.Id);
 
-            var medicalUnitDto = mapper.Map<MedicalUnitDto>(medicalUnit);
-
-            return medicalUnitDto;
+            return mapper.Map<MedicalUnitDto>(medicalUnit);
         }
     }
 }

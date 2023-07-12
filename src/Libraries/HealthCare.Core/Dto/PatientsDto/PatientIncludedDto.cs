@@ -25,6 +25,7 @@ namespace HealthCare.Core.Dto.Patients
         public string Country { get; set; }
         public bool IsSendEmail { get; set; }
         public bool IsSendSms { get; set; }
+        public ICollection<Disease> Diseases { get; set; }
         public ICollection<Appointment> Appointments { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ModifiedDate { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HealthCare.Core.Interfaces.Repositories
 {
-    public interface IDiseaseRepository:IBaseRepository<Disease>
+    public interface IDiseaseRepository : IBaseRepository<Disease>
     {
         Task<ICollection<Disease>> GetIncludedAsync();
         Task<Disease> GetFindIncludedAsync(Expression<Func<Disease, bool>> expression);

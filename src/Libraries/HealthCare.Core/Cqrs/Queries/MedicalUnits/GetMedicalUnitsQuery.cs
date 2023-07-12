@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Queries.MedicalUnits
 {
-    public class GetMedicalUnitIncludedQuery : IRequest<ICollection<MedicalUnitIncludedDto>>
+    public class GetMedicalUnitsQuery:IRequest<ICollection<MedicalUnitDto>>
     {
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
 {
-    public class GetMedicalUnitQueryHandler : IRequestHandler<GetMedicalUnitQuery, ICollection<MedicalUnitDto>>
+    public class GetMedicalUnitQueryHandler : IRequestHandler<GetMedicalUnitsQuery, ICollection<MedicalUnitDto>>
     {
         private readonly ILogger<GetMedicalUnitQueryHandler> logger;
         private readonly IBaseRepository<MedicalUnit> baseRepository;
@@ -20,14 +20,14 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
             this.baseRepository = baseRepository;
             this.mapper = mapper;
         }
-        public async Task<ICollection<MedicalUnitDto>> Handle(GetMedicalUnitQuery request, CancellationToken cancellationToken)
+        public async Task<ICollection<MedicalUnitDto>> Handle(GetMedicalUnitsQuery request, CancellationToken cancellationToken)
         {
             var repo = await baseRepository.GetAsync();
 
             if (repo == null)
             {
                 logger.LogError($"{nameof(baseRepository)} is turn null or empty");
-                throw new ArgumentException("Hasta listesi veritabanından getirilemedi");
+                throw new ArgumentException("Birim listesi veritabanından getirilemedi");
             }
 
             var _mapper = mapper.Map<ICollection<MedicalUnitDto>>(repo);

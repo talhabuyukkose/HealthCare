@@ -11,15 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Cqrs\Commands\Appointments\" />
-    <Folder Include="Cqrs\Commands\Doctors\" />
-    <Folder Include="Cqrs\Commands\Hospitals\" />
-    <Folder Include="Cqrs\Queries\Appointments\" />
-    <Folder Include="Cqrs\Queries\Doctors\" />
-    <Folder Include="Cqrs\Queries\Hospitals\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="MediatR.Extensions.Autofac.DependencyInjection" Version="9.1.0" />
