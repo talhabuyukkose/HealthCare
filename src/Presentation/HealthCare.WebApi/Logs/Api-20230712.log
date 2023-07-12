@@ -1,0 +1,189 @@
+﻿2023-07-12 16:52:36.153 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 16:52:36.182 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 16:52:36.186 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 16:52:36.187 +03:00  INF  Hosting environment: Development
+2023-07-12 16:52:36.187 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 16:52:43.310 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger - -
+2023-07-12 16:52:43.458 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger - - - 301 0 - 154.0140ms
+2023-07-12 16:52:43.471 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 16:52:44.004 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 532.7150ms
+2023-07-12 16:52:44.006 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - -
+2023-07-12 16:52:44.006 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - -
+2023-07-12 16:52:44.006 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - -
+2023-07-12 16:52:44.006 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 16:52:44.007 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 16:52:44.018 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 11.3390ms
+2023-07-12 16:52:44.140 +03:00  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-07-12 16:52:44.140 +03:00  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-07-12 16:52:44.140 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - - - 200 143632 text/css 134.4631ms
+2023-07-12 16:52:44.140 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 134.3428ms
+2023-07-12 16:52:44.146 +03:00  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-07-12 16:52:44.146 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 140.1368ms
+2023-07-12 16:52:44.891 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 884.4110ms
+2023-07-12 16:52:44.962 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 16:52:44.998 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - -
+2023-07-12 16:52:44.998 +03:00  INF  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-07-12 16:52:44.998 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - - - 200 628 image/png 0.7591ms
+2023-07-12 16:52:45.053 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.9771ms
+2023-07-12 16:54:18.170 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 16:54:18.199 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 16:54:18.203 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 16:54:18.204 +03:00  INF  Hosting environment: Development
+2023-07-12 16:54:18.204 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 16:54:21.546 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 16:54:22.048 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 16:54:22.048 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 16:54:22.062 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 519.8611ms
+2023-07-12 16:54:22.062 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 11.5804ms
+2023-07-12 16:54:22.077 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 29.0840ms
+2023-07-12 16:54:22.309 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 16:54:22.418 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 109.3783ms
+2023-07-12 16:57:47.786 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 16:57:47.823 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 16:57:47.829 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 16:57:47.829 +03:00  INF  Hosting environment: Development
+2023-07-12 16:57:47.829 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 16:57:51.053 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 16:57:51.590 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 16:57:51.590 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 16:57:51.596 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 548.3965ms
+2023-07-12 16:57:51.596 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 5.1564ms
+2023-07-12 16:57:51.619 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.7690ms
+2023-07-12 16:57:51.795 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 16:57:51.928 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.2460ms
+2023-07-12 16:58:22.932 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 16:58:23.028 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 16:58:23.033 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 16:58:23.034 +03:00  INF  Hosting environment: Development
+2023-07-12 16:58:23.034 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 16:58:27.308 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 16:58:27.767 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 16:58:27.768 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 16:58:27.775 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 7.1749ms
+2023-07-12 16:58:27.776 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 478.9554ms
+2023-07-12 16:58:27.803 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.4858ms
+2023-07-12 16:58:27.934 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 16:58:28.107 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 173.2840ms
+2023-07-12 16:59:39.354 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 16:59:39.390 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 16:59:39.395 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 16:59:39.396 +03:00  INF  Hosting environment: Development
+2023-07-12 16:59:39.396 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 16:59:41.024 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 16:59:41.762 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 16:59:41.773 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 16:59:41.785 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 771.4808ms
+2023-07-12 16:59:41.790 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 28.2517ms
+2023-07-12 16:59:41.959 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 186.1800ms
+2023-07-12 16:59:42.139 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 16:59:42.274 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.8789ms
+2023-07-12 16:59:49.763 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Patient?IsIncluded=false - -
+2023-07-12 16:59:49.771 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.PatientController.Get (HealthCare.WebApi)'
+2023-07-12 16:59:49.822 +03:00  INF  Route matched with {action = "Get", controller = "Patient"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.PatientController (HealthCare.WebApi).
+2023-07-12 17:00:28.615 +03:00  INF  Executed DbCommand (95ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status"
+FROM "Patient" AS p
+WHERE p."Status" <> -1
+2023-07-12 17:00:51.153 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.Patients.PatientDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-12 17:00:51.194 +03:00  INF  Executed action HealthCare.WebApi.Controllers.PatientController.Get (HealthCare.WebApi) in 61364.4346ms
+2023-07-12 17:00:51.196 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.PatientController.Get (HealthCare.WebApi)'
+2023-07-12 17:00:51.213 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Patient?IsIncluded=false - - - 200 - application/json;+charset=utf-8 61450.2662ms
+2023-07-12 17:02:33.228 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 17:02:33.279 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 17:02:33.286 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 17:02:33.287 +03:00  INF  Hosting environment: Development
+2023-07-12 17:02:33.287 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 17:02:37.168 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 17:02:39.554 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 2393.1932ms
+2023-07-12 17:02:39.556 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 17:02:39.568 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 17:02:39.572 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 16.4621ms
+2023-07-12 17:02:39.603 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.6389ms
+2023-07-12 17:02:39.787 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 17:02:39.914 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.9953ms
+2023-07-12 17:07:09.505 +03:00  INF  Request starting HTTP/2 POST https://localhost:7106/api/Patient application/json 405
+2023-07-12 17:07:09.513 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi)'
+2023-07-12 17:07:09.566 +03:00  INF  Route matched with {action = "Post", controller = "Patient"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HealthCare.Core.Cqrs.Commands.Patients.CreatePatientCommand) on controller HealthCare.WebApi.Controllers.PatientController (HealthCare.WebApi).
+2023-07-12 17:07:21.978 +03:00  INF  Executed action HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi) in 12406.5178ms
+2023-07-12 17:07:21.985 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi)'
+2023-07-12 17:07:21.994 +03:00  ERR  An unhandled exception has occurred while executing the request.AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+CreatePatientCommand -> Patient
+HealthCare.Core.Cqrs.Commands.Patients.CreatePatientCommand -> HealthCare.Core.Domain.Entities.Patient
+   at lambda_method10(Closure , Object , Patient , ResolutionContext )
+   at HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients.CreatePatientCommandHandler.Handle(CreatePatientCommand request, CancellationToken cancellationToken) in C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Libraries\HealthCare.Core\Cqrs\Handlers\CommandHandlers\Patients\CreatePatientCommandHandler.cs:line 29
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at HealthCare.WebApi.Controllers.PatientController.Post(CreatePatientCommand patientCommand) in C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\Controllers\PatientController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+2023-07-12 17:07:22.110 +03:00  INF  Request finished HTTP/2 POST https://localhost:7106/api/Patient application/json 405 - 500 - text/plain;+charset=utf-8 12604.9344ms
+2023-07-12 17:08:23.197 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 17:08:23.232 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 17:08:23.237 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 17:08:23.238 +03:00  INF  Hosting environment: Development
+2023-07-12 17:08:23.238 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 17:08:25.968 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 17:08:26.606 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 643.7596ms
+2023-07-12 17:08:26.621 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 17:08:26.622 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 17:08:26.640 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 18.8389ms
+2023-07-12 17:08:26.670 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.8908ms
+2023-07-12 17:08:26.933 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 17:08:27.103 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.1244ms
+2023-07-12 17:08:32.158 +03:00  INF  Request starting HTTP/2 POST https://localhost:7106/api/Patient application/json 405
+2023-07-12 17:08:32.170 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi)'
+2023-07-12 17:08:32.217 +03:00  INF  Route matched with {action = "Post", controller = "Patient"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HealthCare.Core.Cqrs.Commands.Patients.CreatePatientCommand) on controller HealthCare.WebApi.Controllers.PatientController (HealthCare.WebApi).
+2023-07-12 17:08:56.510 +03:00  INF  Executed DbCommand (112ms) [Parameters=[@p0='?', @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = DateTime), @p5='?', @p6='?', @p7='?', @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?', @p11='?', @p12='?' (DbType = DateTime), @p13='?', @p14='?', @p15='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Patient" ("Address", "BirthDate", "City", "Country", "CreatedDate", "Email", "FirstName", "IdentityNumber", "IsSendEmail", "IsSendSms", "LastName", "Mobile", "ModifiedDate", "PostalCode", "Region", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15)
+RETURNING "Id";
+2023-07-12 17:08:59.320 +03:00  INF  Executing OkObjectResult, writing value of type 'HealthCare.Core.Cqrs.Commands.Patients.CreatePatientCommand'.
+2023-07-12 17:08:59.342 +03:00  INF  Executed action HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi) in 27118.8091ms
+2023-07-12 17:08:59.343 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.PatientController.Post (HealthCare.WebApi)'
+2023-07-12 17:08:59.362 +03:00  INF  Request finished HTTP/2 POST https://localhost:7106/api/Patient application/json 405 - 200 - application/json;+charset=utf-8 27203.0813ms
+2023-07-12 17:16:52.542 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 17:16:52.597 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 17:16:52.602 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 17:16:52.603 +03:00  INF  Hosting environment: Development
+2023-07-12 17:16:52.603 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 17:16:56.681 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 17:16:57.297 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 17:16:57.297 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 17:16:57.298 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 622.6582ms
+2023-07-12 17:16:57.316 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 19.4964ms
+2023-07-12 17:16:57.331 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.4001ms
+2023-07-12 17:16:57.536 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 17:16:57.668 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 131.2655ms
+2023-07-12 17:17:23.973 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-12 17:17:24.004 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-12 17:17:24.011 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-12 17:17:24.012 +03:00  INF  Hosting environment: Development
+2023-07-12 17:17:24.012 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-12 17:17:29.165 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-12 17:17:29.832 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 676.7599ms
+2023-07-12 17:17:29.834 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-12 17:17:29.858 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-12 17:17:29.862 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 28.2507ms
+2023-07-12 17:17:29.894 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 35.1264ms
+2023-07-12 17:17:30.070 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-12 17:17:30.187 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 117.1916ms
