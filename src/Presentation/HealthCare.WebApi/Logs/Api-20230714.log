@@ -1,0 +1,267 @@
+﻿2023-07-14 00:15:12.674 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-14 00:15:12.715 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-14 00:15:12.720 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-14 00:15:12.720 +03:00  INF  Hosting environment: Development
+2023-07-14 00:15:12.720 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-14 00:15:14.938 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-14 00:15:15.384 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 452.1674ms
+2023-07-14 00:15:15.387 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-14 00:15:15.387 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-14 00:15:15.406 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 19.0544ms
+2023-07-14 00:15:15.421 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 33.8071ms
+2023-07-14 00:15:15.565 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-14 00:15:15.698 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 133.3433ms
+2023-07-14 00:15:29.476 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-14 00:15:29.509 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-14 00:15:29.514 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-14 00:15:29.515 +03:00  INF  Hosting environment: Development
+2023-07-14 00:15:29.515 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-14 00:15:32.338 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-14 00:15:32.709 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-14 00:15:32.711 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-14 00:15:32.722 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 7.5575ms
+2023-07-14 00:15:32.722 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 389.2066ms
+2023-07-14 00:15:32.739 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.9184ms
+2023-07-14 00:15:32.879 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-14 00:15:33.067 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 188.4128ms
+2023-07-14 00:15:36.287 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Cron/Start - -
+2023-07-14 00:15:36.296 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.CronController.Start (HealthCare.WebApi)'
+2023-07-14 00:15:36.328 +03:00  INF  Route matched with {action = "Start", controller = "Cron"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Start() on controller HealthCare.WebApi.Controllers.CronController (HealthCare.WebApi).
+2023-07-14 00:15:36.402 +03:00  INF  Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2023-07-14 00:15:36.402 +03:00  INF  Quartz Scheduler created
+2023-07-14 00:15:36.402 +03:00  INF  JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-07-14 00:15:36.403 +03:00  INF  RAMJobStore initialized.
+2023-07-14 00:15:36.404 +03:00  INF  Quartz Scheduler 3.6.3.0 - 'SendEmailOrSmsJob' with instanceId 'SendEmailOrSmsJob' initialized
+2023-07-14 00:15:36.404 +03:00  INF  Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2023-07-14 00:15:36.404 +03:00  INF  Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2023-07-14 00:15:36.441 +03:00  INF  Scheduler SendEmailOrSmsJob_$_SendEmailOrSmsJob started.
+2023-07-14 00:15:36.441 +03:00  INF  JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2023-07-14 00:15:36.494 +03:00  INF  Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-14 00:15:36.501 +03:00  INF  Executed action HealthCare.WebApi.Controllers.CronController.Start (HealthCare.WebApi) in 167.315ms
+2023-07-14 00:15:36.503 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.CronController.Start (HealthCare.WebApi)'
+2023-07-14 00:15:36.503 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Cron/Start - - - 200 - text/plain;+charset=utf-8 215.5931ms
+2023-07-14 00:16:26.261 +03:00  INF  Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:16:26.521 +03:00  INF  Executed DbCommand (31ms) [Parameters=[@__request_dateTime_Day_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AppointmentDate", a."CreatedDate", a."DoctorID", a."HospitalID", a."MedicalUnitID", a."ModifiedDate", a."PatientID", a."Status", p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status", d."Id", d."CreatedDate", d."FirstName", d."HospitalID", d."LastName", d."MedicalUnitID", d."ModifiedDate", d."Status", d."Title", m."Id", m."CreatedDate", m."ModifiedDate", m."Name", m."Status", h."Id", h."Address", h."City", h."CreatedDate", h."Email", h."ModifiedDate", h."Name", h."Phone", h."Region", h."Status"
+FROM "Appointment" AS a
+INNER JOIN "Patient" AS p ON a."PatientID" = p."Id"
+INNER JOIN "Doctor" AS d ON a."DoctorID" = d."Id"
+INNER JOIN "MedicalUnit" AS m ON a."MedicalUnitID" = m."Id"
+INNER JOIN "Hospital" AS h ON a."HospitalID" = h."Id"
+WHERE a."Status" <> -1 AND date_part('day', a."AppointmentDate")::int = @__request_dateTime_Day_0
+2023-07-14 00:16:57.623 +03:00  INF  Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:16:57.712 +03:00  INF  Executed DbCommand (3ms) [Parameters=[@__request_dateTime_Day_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AppointmentDate", a."CreatedDate", a."DoctorID", a."HospitalID", a."MedicalUnitID", a."ModifiedDate", a."PatientID", a."Status", p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status", d."Id", d."CreatedDate", d."FirstName", d."HospitalID", d."LastName", d."MedicalUnitID", d."ModifiedDate", d."Status", d."Title", m."Id", m."CreatedDate", m."ModifiedDate", m."Name", m."Status", h."Id", h."Address", h."City", h."CreatedDate", h."Email", h."ModifiedDate", h."Name", h."Phone", h."Region", h."Status"
+FROM "Appointment" AS a
+INNER JOIN "Patient" AS p ON a."PatientID" = p."Id"
+INNER JOIN "Doctor" AS d ON a."DoctorID" = d."Id"
+INNER JOIN "MedicalUnit" AS m ON a."MedicalUnitID" = m."Id"
+INNER JOIN "Hospital" AS h ON a."HospitalID" = h."Id"
+WHERE a."Status" <> -1 AND date_part('day', a."AppointmentDate")::int > @__request_dateTime_Day_0
+2023-07-14 00:22:36.242 +03:00  INF  talha.buyukkose@hotmail.com adresine mail gönderiliyor...
+2023-07-14 00:38:49.949 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-14 00:38:49.984 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-14 00:38:49.989 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-14 00:38:49.990 +03:00  INF  Hosting environment: Development
+2023-07-14 00:38:49.990 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-14 00:38:52.935 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-14 00:38:53.425 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-14 00:38:53.425 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-14 00:38:53.429 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 498.0407ms
+2023-07-14 00:38:53.436 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 11.1956ms
+2023-07-14 00:38:53.452 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.3975ms
+2023-07-14 00:38:53.579 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-14 00:38:53.769 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 190.3936ms
+2023-07-14 00:40:40.517 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-14 00:40:40.549 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-14 00:40:40.558 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-14 00:40:40.559 +03:00  INF  Hosting environment: Development
+2023-07-14 00:40:40.559 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-14 00:40:43.793 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-14 00:40:44.215 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-14 00:40:44.216 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-14 00:40:44.227 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 10.9792ms
+2023-07-14 00:40:44.228 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 443.2204ms
+2023-07-14 00:40:44.241 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.2221ms
+2023-07-14 00:40:44.362 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-14 00:40:44.506 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.8613ms
+2023-07-14 00:40:58.782 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:40:58.793 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:40:58.842 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:42:19.321 +03:00  INF  Now listening on: https://localhost:7106
+2023-07-14 00:42:19.350 +03:00  INF  Now listening on: http://localhost:5014
+2023-07-14 00:42:19.355 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-07-14 00:42:19.356 +03:00  INF  Hosting environment: Development
+2023-07-14 00:42:19.356 +03:00  INF  Content root path: C:\Users\talha\OneDrive\Desktop\VisualStudio\Interview\HealthCare\src\Presentation\HealthCare.WebApi\
+2023-07-14 00:42:23.349 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - -
+2023-07-14 00:42:23.747 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - -
+2023-07-14 00:42:23.749 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/_vs/browserLink - -
+2023-07-14 00:42:23.762 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_framework/aspnetcore-browser-refresh.js - - - 200 12004 application/javascript;+charset=utf-8 8.8761ms
+2023-07-14 00:42:23.764 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - - - 200 - text/html;charset=utf-8 420.4895ms
+2023-07-14 00:42:23.781 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 31.5199ms
+2023-07-14 00:42:23.906 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - -
+2023-07-14 00:42:24.036 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 129.7963ms
+2023-07-14 00:42:28.307 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:42:28.321 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:42:28.356 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:42:33.044 +03:00  INF  Executed DbCommand (103ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:42:33.105 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:42:38.862 +03:00  INF  Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:42:39.094 +03:00  INF  Executed DbCommand (54ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AppointmentDate", a."CreatedDate", a."DoctorID", a."HospitalID", a."MedicalUnitID", a."ModifiedDate", a."PatientID", a."Status", p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status", d."Id", d."CreatedDate", d."FirstName", d."HospitalID", d."LastName", d."MedicalUnitID", d."ModifiedDate", d."Status", d."Title", m."Id", m."CreatedDate", m."ModifiedDate", m."Name", m."Status", h."Id", h."Address", h."City", h."CreatedDate", h."Email", h."ModifiedDate", h."Name", h."Phone", h."Region", h."Status"
+FROM "Appointment" AS a
+INNER JOIN "Patient" AS p ON a."PatientID" = p."Id"
+INNER JOIN "Doctor" AS d ON a."DoctorID" = d."Id"
+INNER JOIN "MedicalUnit" AS m ON a."MedicalUnitID" = m."Id"
+INNER JOIN "Hospital" AS h ON a."HospitalID" = h."Id"
+WHERE a."Status" <> -1
+2023-07-14 00:42:59.682 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.AppointmentsDto.AppointmentIncludedDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-14 00:42:59.733 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi) in 31371.6801ms
+2023-07-14 00:42:59.734 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:42:59.754 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - - - 200 - application/json;+charset=utf-8 31446.5639ms
+2023-07-14 00:43:03.495 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:43:03.496 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:43:03.497 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:43:05.729 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:43:05.748 +03:00  INF  Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:43:17.636 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.AppointmentsDto.AppointmentIncludedDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-14 00:43:17.637 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi) in 14139.9717ms
+2023-07-14 00:43:17.637 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:43:17.637 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - - - 200 - application/json;+charset=utf-8 14141.9190ms
+2023-07-14 00:44:10.126 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:44:10.127 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:44:10.129 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:44:14.062 +03:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:44:14.123 +03:00  INF  Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:44:18.405 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:44:18.455 +03:00  INF  Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AppointmentDate", a."CreatedDate", a."DoctorID", a."HospitalID", a."MedicalUnitID", a."ModifiedDate", a."PatientID", a."Status", p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status", d."Id", d."CreatedDate", d."FirstName", d."HospitalID", d."LastName", d."MedicalUnitID", d."ModifiedDate", d."Status", d."Title", m."Id", m."CreatedDate", m."ModifiedDate", m."Name", m."Status", h."Id", h."Address", h."City", h."CreatedDate", h."Email", h."ModifiedDate", h."Name", h."Phone", h."Region", h."Status"
+FROM "Appointment" AS a
+INNER JOIN "Patient" AS p ON a."PatientID" = p."Id"
+INNER JOIN "Doctor" AS d ON a."DoctorID" = d."Id"
+INNER JOIN "MedicalUnit" AS m ON a."MedicalUnitID" = m."Id"
+INNER JOIN "Hospital" AS h ON a."HospitalID" = h."Id"
+WHERE a."Status" <> -1
+2023-07-14 00:44:25.744 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.AppointmentsDto.AppointmentIncludedDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-14 00:44:25.745 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi) in 15615.1135ms
+2023-07-14 00:44:25.745 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:44:25.745 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - - - 200 - application/json;+charset=utf-8 15618.2309ms
+2023-07-14 00:44:27.367 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:44:27.367 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:44:27.372 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:44:29.395 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:44:29.398 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:45:08.109 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.AppointmentsDto.AppointmentIncludedDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-14 00:45:08.115 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi) in 40742.7366ms
+2023-07-14 00:45:08.115 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:45:08.115 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - - - 200 - application/json;+charset=utf-8 40748.2641ms
+2023-07-14 00:45:42.305 +03:00  INF  Request starting HTTP/2 POST https://localhost:7106/api/Appointment application/json 127
+2023-07-14 00:45:42.305 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Post (HealthCare.WebApi)'
+2023-07-14 00:45:42.312 +03:00  INF  Route matched with {action = "Post", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(HealthCare.Core.Cqrs.Commands.Appointments.CreateAppointmentCommand) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:45:45.239 +03:00  INF  Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Hospital" AS h
+WHERE h."Status" <> -1
+2023-07-14 00:45:45.285 +03:00  INF  Executed DbCommand (18ms) [Parameters=[@__request_HospitalID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Hospital" AS h
+    WHERE h."Status" <> -1 AND h."Id" = @__request_HospitalID_0)
+2023-07-14 00:45:45.920 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "MedicalUnit" AS m
+WHERE m."Status" <> -1
+2023-07-14 00:45:45.943 +03:00  INF  Executed DbCommand (2ms) [Parameters=[@__request_MedicalUnitID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "MedicalUnit" AS m
+    WHERE m."Status" <> -1 AND m."Id" = @__request_MedicalUnitID_0)
+2023-07-14 00:45:46.441 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Doctor" AS d
+WHERE d."Status" <> -1
+2023-07-14 00:45:46.464 +03:00  INF  Executed DbCommand (2ms) [Parameters=[@__request_DoctorID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Doctor" AS d
+    WHERE d."Status" <> -1 AND d."Id" = @__request_DoctorID_0)
+2023-07-14 00:45:46.974 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Patient" AS p
+WHERE p."Status" <> -1
+2023-07-14 00:45:47.003 +03:00  INF  Executed DbCommand (7ms) [Parameters=[@__request_PatientID_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Patient" AS p
+    WHERE p."Status" <> -1 AND p."Id" = @__request_PatientID_0)
+2023-07-14 00:45:48.569 +03:00  INF  Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = DateTime), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Appointment" ("AppointmentDate", "CreatedDate", "DoctorID", "HospitalID", "MedicalUnitID", "ModifiedDate", "PatientID", "Status")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7)
+RETURNING "Id";
+2023-07-14 00:45:51.059 +03:00  INF  Executing OkObjectResult, writing value of type 'HealthCare.Core.Cqrs.Commands.Appointments.CreateAppointmentCommand'.
+2023-07-14 00:45:51.060 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Post (HealthCare.WebApi) in 8747.5952ms
+2023-07-14 00:45:51.060 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Post (HealthCare.WebApi)'
+2023-07-14 00:45:51.060 +03:00  INF  Request finished HTTP/2 POST https://localhost:7106/api/Appointment application/json 127 - 200 - application/json;+charset=utf-8 8755.5800ms
+2023-07-14 00:45:55.837 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - -
+2023-07-14 00:45:55.838 +03:00  INF  Executing endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:45:55.841 +03:00  INF  Route matched with {action = "Get", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Boolean) on controller HealthCare.WebApi.Controllers.AppointmentController (HealthCare.WebApi).
+2023-07-14 00:45:58.339 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:45:58.341 +03:00  INF  Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:46:09.162 +03:00  INF  Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Appointment" AS a
+WHERE a."Status" <> -1
+2023-07-14 00:46:09.218 +03:00  INF  Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."AppointmentDate", a."CreatedDate", a."DoctorID", a."HospitalID", a."MedicalUnitID", a."ModifiedDate", a."PatientID", a."Status", p."Id", p."Address", p."BirthDate", p."City", p."Country", p."CreatedDate", p."Email", p."FirstName", p."IdentityNumber", p."IsSendEmail", p."IsSendSms", p."LastName", p."Mobile", p."ModifiedDate", p."PostalCode", p."Region", p."Status", d."Id", d."CreatedDate", d."FirstName", d."HospitalID", d."LastName", d."MedicalUnitID", d."ModifiedDate", d."Status", d."Title", m."Id", m."CreatedDate", m."ModifiedDate", m."Name", m."Status", h."Id", h."Address", h."City", h."CreatedDate", h."Email", h."ModifiedDate", h."Name", h."Phone", h."Region", h."Status"
+FROM "Appointment" AS a
+INNER JOIN "Patient" AS p ON a."PatientID" = p."Id"
+INNER JOIN "Doctor" AS d ON a."DoctorID" = d."Id"
+INNER JOIN "MedicalUnit" AS m ON a."MedicalUnitID" = m."Id"
+INNER JOIN "Hospital" AS h ON a."HospitalID" = h."Id"
+WHERE a."Status" <> -1
+2023-07-14 00:46:14.076 +03:00  INF  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HealthCare.Core.Dto.AppointmentsDto.AppointmentIncludedDto, HealthCare.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-14 00:46:14.081 +03:00  INF  Executed action HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi) in 18240.2961ms
+2023-07-14 00:46:14.082 +03:00  INF  Executed endpoint 'HealthCare.WebApi.Controllers.AppointmentController.Get (HealthCare.WebApi)'
+2023-07-14 00:46:14.082 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/api/Appointment?IsIncluded=true - - - 200 - application/json;+charset=utf-8 18245.1399ms

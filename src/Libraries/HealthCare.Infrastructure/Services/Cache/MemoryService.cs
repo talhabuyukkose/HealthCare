@@ -21,12 +21,12 @@ namespace HealthCare.Infrastructure.Services.Cache
             return memoryCache.CreateEntry(key);
         }
 
-        public void Set(object key, object value, DateTime dateTime)
+        public void Set(object key, object value, TimeSpan timeSpan)
         {
             var options = new MemoryCacheEntryOptions
             {
-                AbsoluteExpiration = dateTime,
-                //AbsoluteExpirationRelativeToNow = timeSpan,
+                //AbsoluteExpiration = dateTime,
+                AbsoluteExpirationRelativeToNow = timeSpan,
                 Priority = CacheItemPriority.Normal,
             };
 

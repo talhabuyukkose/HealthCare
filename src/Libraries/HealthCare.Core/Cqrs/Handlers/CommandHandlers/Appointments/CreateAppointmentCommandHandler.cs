@@ -38,16 +38,16 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Appointments
         {
             try
             {
-                if (await repositoryHospital.AnyAsync(any => any.Id == request.HospitalID))
+                if (await repositoryHospital.AnyAsync(any => any.Id == request.HospitalID) is false)
                     throw new Exception($"{nameof(request.HospitalID)} bulunamadı");
 
-                if (await repositoryMedicalUnit.AnyAsync(any => any.Id == request.MedicalUnitID))
+                if (await repositoryMedicalUnit.AnyAsync(any => any.Id == request.MedicalUnitID) is false)
                     throw new Exception($"{nameof(request.MedicalUnitID)} bulunamadı");
 
-                if (await repositoryDoctor.AnyAsync(any => any.Id == request.DoctorID))
+                if (await repositoryDoctor.AnyAsync(any => any.Id == request.DoctorID) is false)
                     throw new Exception($"{nameof(request.DoctorID)} bulunamadı");
 
-                if (await repositoryPatient.AnyAsync(any => any.Id == request.PatientID))
+                if (await repositoryPatient.AnyAsync(any => any.Id == request.PatientID) is false)
                     throw new Exception($"{nameof(request.PatientID)} bulunamadı");
 
 

@@ -12,7 +12,7 @@ namespace HealthCare.Core.Interfaces.Cache
         ICacheEntry CreateEntry(object key);
         void Dispose();
         void Remove(object key);
-        void Set(object key, object value, DateTime timeSpan);
+        void Set(object key, object value, TimeSpan timeSpan);
         bool TryGetValue(object key, out object? value);
     }
 }
