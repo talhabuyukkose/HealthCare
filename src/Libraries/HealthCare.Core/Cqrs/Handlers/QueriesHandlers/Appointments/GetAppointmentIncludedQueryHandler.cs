@@ -28,9 +28,8 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
 
             if (memoryService.TryGetValue(nameof(GetAppointmentIncludedQuery) + "Count", out object objectcount))
             {
-                int.TryParse(objectcount.ToString(), out int objectcountint);
 
-                if (count != objectcountint)
+                if (count != Convert.ToInt32(objectcount))
                 {
                     memoryService.Remove(nameof(GetAppointmentIncludedQuery) + "Count");
                     memoryService.Remove(nameof(GetAppointmentIncludedQuery));
@@ -53,6 +52,9 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
 
             memoryService.CreateEntry(nameof(GetAppointmentIncludedQuery));
             memoryService.Set(nameof(GetAppointmentIncludedQuery), _mapper, TimeSpan.FromHours(1));
+
+            memoryService.CreateEntry(nameof(GetAppointmentIncludedQuery) + "Count");
+            memoryService.Set(nameof(GetAppointmentIncludedQuery) + "Count", _mapper.Count(), TimeSpan.FromHours(1));
 
             return _mapper;
         }

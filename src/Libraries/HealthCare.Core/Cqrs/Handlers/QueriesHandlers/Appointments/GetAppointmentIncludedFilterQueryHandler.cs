@@ -45,7 +45,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
                 return mapper.Map<ICollection<AppointmentIncludedDto>>(memoryData);
             }
 
-            var repo = await appointmentRepository.GetListWithFilterIncludedAsync(filter => filter.AppointmentDate.Day > request.dateTime.Day);
+            var repo = await appointmentRepository.GetListWithFilterIncludedAsync(filter => filter.AppointmentDate.Day == request.dateTime.Day);
 
             if (repo == null)
             {
