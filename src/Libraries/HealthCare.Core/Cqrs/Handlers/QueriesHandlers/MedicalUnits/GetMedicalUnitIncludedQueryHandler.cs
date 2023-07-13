@@ -1,17 +1,9 @@
 ﻿using AutoMapper;
-using HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients;
 using HealthCare.Core.Cqrs.Queries.MedicalUnits;
-using HealthCare.Core.Cqrs.Queries.Patients;
 using HealthCare.Core.Dto.MedicalUnitsDto;
-using HealthCare.Core.Dto.Patients;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
 {
@@ -29,7 +21,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
         }
         public async Task<ICollection<MedicalUnitIncludedDto>> Handle(GetMedicalUnitsIncludedQuery request, CancellationToken cancellationToken)
         {
-            var repo = await medicalUnitRepository.GetIncludedAsync();
+            var repo = await medicalUnitRepository.GetListIncludedAsync();
 
             if (repo == null)
             {

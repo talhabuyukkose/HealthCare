@@ -10,8 +10,8 @@ namespace HealthCare.Core.Interfaces.Repositories
 {
     public interface IHospitalRepository :IBaseRepository<Hospital>
     {
-        Task<ICollection<Hospital>> GetIncludedAsync();
+        Task<ICollection<Hospital>> GetListIncludedAsync();
         Task<Hospital> GetFindIncludedAsync(Expression<Func<Hospital, bool>> expression);
-        Task<ICollection<Hospital>> GetFilterIncludedAsync(Expression<Func<Hospital, bool>> expression);
+        Task<ICollection<Hospital>> GetListWithFilterIncludedAsync(Expression<Func<Hospital, bool>> expression);
     }
 }

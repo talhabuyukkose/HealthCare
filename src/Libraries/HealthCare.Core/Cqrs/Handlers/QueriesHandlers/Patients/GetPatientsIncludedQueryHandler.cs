@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using HealthCare.Core.Cqrs.Queries.Patients;
 using HealthCare.Core.Dto.Patients;
+using HealthCare.Core.Exceptions;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -13,7 +14,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients
         private readonly IPatientRepository patientRepository;
         private readonly IMapper mapper;
 
-        public GetPatientsIncludedQueryHandler(ILogger<GetPatientsIncludedQueryHandler> logger,IPatientRepository patientRepository,IMapper mapper)
+        public GetPatientsIncludedQueryHandler(ILogger<GetPatientsIncludedQueryHandler> logger, IPatientRepository patientRepository, IMapper mapper)
         {
             this.logger = logger;
             this.patientRepository = patientRepository;
@@ -21,7 +22,9 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients
         }
         public async Task<ICollection<PatientIncludedDto>> Handle(GetPatientsIncludedQuery request, CancellationToken cancellationToken)
         {
-            var repoPatients = await patientRepository.GetIncludedAsync();
+            ICollection<PatientIncludedDto> patientIncludedDtos = new List<PatientIncludedDto>();
+
+            var repoPatients = await patientRepository.GetListIncludedAsync();
 
             if (repoPatients == null)
             {
@@ -29,9 +32,9 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients
                 throw new ArgumentException("Hasta listesi veritabanından getirilemedi");
             }
 
-            var mapperpatients = mapper.Map<ICollection<PatientIncludedDto>>(repoPatients);
-
-            return mapperpatients;
+            patientIncludedDtos = mapper.Map<ICollection<PatientIncludedDto>>(repoPatients);
+            
+            return patientIncludedDtos;
         }
     }
 }

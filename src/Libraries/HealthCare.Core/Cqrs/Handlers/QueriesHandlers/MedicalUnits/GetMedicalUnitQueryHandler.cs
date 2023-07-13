@@ -22,7 +22,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.MedicalUnits
         }
         public async Task<ICollection<MedicalUnitDto>> Handle(GetMedicalUnitsQuery request, CancellationToken cancellationToken)
         {
-            var repo = await baseRepository.GetAsync();
+            var repo = await baseRepository.GetListAsync();
 
             if (repo == null)
             {

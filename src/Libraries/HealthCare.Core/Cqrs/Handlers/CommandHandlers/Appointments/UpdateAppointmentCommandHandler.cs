@@ -61,7 +61,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Appointments
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException("Update işlemi yapılamadı", ex);
+                throw new Exception("Update işlemi yapılamadı", ex);
             }
         }
     }

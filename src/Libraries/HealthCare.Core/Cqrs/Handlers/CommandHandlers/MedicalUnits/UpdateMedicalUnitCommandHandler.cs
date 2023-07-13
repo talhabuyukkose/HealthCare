@@ -4,11 +4,6 @@ using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.MedicalUnits
 {
@@ -18,7 +13,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.MedicalUnits
         private readonly IBaseRepository<MedicalUnit> baseRepository;
         private readonly IMapper mapper;
 
-        public UpdateMedicalUnitCommandHandler(ILogger<UpdateMedicalUnitCommandHandler> logger,IBaseRepository<MedicalUnit> baseRepository,IMapper mapper)
+        public UpdateMedicalUnitCommandHandler(ILogger<UpdateMedicalUnitCommandHandler> logger, IBaseRepository<MedicalUnit> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;
@@ -39,7 +34,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.MedicalUnits
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException("Update işlemi yapılamadı", ex);
+                throw new Exception("Update işlemi yapılamadı", ex);
             }
         }
     }

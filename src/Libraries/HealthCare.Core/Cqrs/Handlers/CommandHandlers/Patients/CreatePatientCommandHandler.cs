@@ -4,11 +4,6 @@ using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients
 {
@@ -18,7 +13,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients
         private readonly IBaseRepository<Patient> baseRepository;
         private readonly IMapper mapper;
 
-        public CreatePatientCommandHandler(ILogger<CreatePatientCommandHandler> logger,IBaseRepository<Patient> baseRepository,IMapper mapper)
+        public CreatePatientCommandHandler(ILogger<CreatePatientCommandHandler> logger, IBaseRepository<Patient> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;

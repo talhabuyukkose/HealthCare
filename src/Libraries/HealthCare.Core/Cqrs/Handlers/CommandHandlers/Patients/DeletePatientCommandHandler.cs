@@ -22,9 +22,8 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients
         }
         public async Task<PatientDto> Handle(DeletePatientCommand request, CancellationToken cancellationToken)
         {
-            var IsExistPatient = await baseRepository.AnyAsync(find => find.Id == request.Id);
 
-            if (IsExistPatient)
+            if (await baseRepository.AnyAsync(find => find.Id == request.Id) is false)
             {
                 logger.LogInformation($"{request.Id} value is not here");
 

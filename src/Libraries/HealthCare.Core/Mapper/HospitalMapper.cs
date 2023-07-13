@@ -2,11 +2,6 @@
 using HealthCare.Core.Cqrs.Commands.Hospitals;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Dto.HospitalsDto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Mapper
 {
@@ -15,7 +10,8 @@ namespace HealthCare.Core.Mapper
         public HospitalMapper()
         {
             CreateMap<Hospital,HospitalDto>().ReverseMap();
-            CreateMap<Hospital,HospitalIncludedDto>().ReverseMap();
+            CreateMap<HospitalIncludedDto, Hospital>().ReverseMap()
+                .ForMember(item1 => item1.MedicalUnits, item2 => item2.MapFrom(ol => ol.HospitalMedicalUnits.Select(s => s.MedicalUnit)));
             CreateMap<Hospital,CreateHospitalCommand>().ReverseMap();
             CreateMap<Hospital,UpdateHospitalCommand>().ReverseMap();
         }

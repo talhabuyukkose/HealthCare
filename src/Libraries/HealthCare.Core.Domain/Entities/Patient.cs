@@ -1,10 +1,5 @@
 ﻿using HealthCare.Core.Domain.Common;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Domain.Entities
 {
@@ -25,7 +20,6 @@ namespace HealthCare.Core.Domain.Entities
         public string Country { get; set; }
         public bool IsSendEmail { get; set; }
         public bool IsSendSms { get; set; }
-        public ICollection<Disease> Diseases { get; set; }
         public ICollection<Appointment> Appointments { get; set; }
     }
 }

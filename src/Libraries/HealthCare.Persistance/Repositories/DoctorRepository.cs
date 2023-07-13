@@ -16,23 +16,31 @@ namespace HealthCare.Persistance.Repositories
         public DoctorRepository(PostgreDbContext context) : base(context)
         {
         }
-        private IQueryable<Doctor> GetIncluded()
+        private async Task<IQueryable<Doctor>> IncludedAsync()
         {
-            return GetEntitiesUnDeleted().Include(x => x.Appointments).Include(x => x.Diseases).Include(x => x.Hospital).Include(x=>x.MedicalUnit);
+            var values = await GetEntitiesUnDeleted();
+
+            return values.Include(x => x.Appointments).Include(x => x.Hospital).Include(x=>x.MedicalUnit);
         }
-        public async Task<ICollection<Doctor>> GetFilterIncludedAsync(Expression<Func<Doctor, bool>> expression)
+        public async Task<ICollection<Doctor>> GetListWithFilterIncludedAsync(Expression<Func<Doctor, bool>> expression)
         {
-            return await GetIncluded().Where(expression).ToListAsync();
+            var values = await IncludedAsync();
+            
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<Doctor> GetFindIncludedAsync(Expression<Func<Doctor, bool>> expression)
         {
-            return await GetIncluded().SingleAsync(expression);
+            var values = await IncludedAsync();
+
+            return await values.SingleAsync(expression);
         }
 
-        public async Task<ICollection<Doctor>> GetIncludedAsync()
+        public async Task<ICollection<Doctor>> GetListIncludedAsync()
         {
-            return await GetIncluded().ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.ToListAsync();
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using HealthCare.Core.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Domain.Entities
 {
@@ -16,7 +11,8 @@ namespace HealthCare.Core.Domain.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         public ICollection<Doctor> Doctors { get; set; }
-        public ICollection<MedicalUnit> MedicalUnits { get; set; }
+        //ManytoMany
+        public ICollection<HospitalMedicalUnit> HospitalMedicalUnits { get; set; }
         public ICollection<Appointment> Appointments { get; set; }
     }
 }

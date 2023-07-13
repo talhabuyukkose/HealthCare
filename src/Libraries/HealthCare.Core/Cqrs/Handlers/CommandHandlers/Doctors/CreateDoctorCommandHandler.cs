@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
 using HealthCare.Core.Cqrs.Commands.Doctors;
-using HealthCare.Core.Cqrs.Commands.Patients;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Doctors
 {
@@ -38,10 +32,10 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Doctors
         {
             try
             {
-                if (await repositoryMedicalUnit.AnyAsync(any => any.Id == request.MedicalUnitID))
+                if (await repositoryMedicalUnit.AnyAsync(any => any.Id == request.MedicalUnitID) is false)
                     throw new Exception($"{nameof(request.MedicalUnitID)} bulunamadı");
 
-                if (await repositoryHospital.AnyAsync(any => any.Id == request.HospitalID))
+                if (await repositoryHospital.AnyAsync(any => any.Id == request.HospitalID) is false)
                     throw new Exception($"{nameof(request.HospitalID)} bulunamadı");
 
                 var doctor = mapper.Map<Doctor>(request);

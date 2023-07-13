@@ -22,9 +22,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.MedicalUnits
         }
         public async Task<MedicalUnitDto> Handle(DeleteMedicalUnitCommand request, CancellationToken cancellationToken)
         {
-            var isExistMedicalUnit = await baseRepository.AnyAsync(find => find.Id == request.Id);
-
-            if (isExistMedicalUnit)
+            if (await baseRepository.AnyAsync(find => find.Id == request.Id) is false)
             {
                 logger.LogInformation($"{request.Id} value is not here");
 

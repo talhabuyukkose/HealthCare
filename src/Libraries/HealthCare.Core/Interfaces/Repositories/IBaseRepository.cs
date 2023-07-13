@@ -1,10 +1,5 @@
 ﻿using HealthCare.Core.Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Interfaces.Repositories
 {
@@ -18,18 +13,24 @@ namespace HealthCare.Core.Interfaces.Repositories
         /// Can get all rows from a table from database
         /// </summary>
         /// <returns></returns>
-        Task<ICollection<T>> GetAllAsync();
+        Task<ICollection<T>> GetListWithDeletedAsync();
         /// <summary>
         /// Can get rows without deleted rows from database
         /// </summary>
         /// <returns></returns>
-        Task<ICollection<T>> GetAsync();
+        Task<ICollection<T>> GetListAsync();
         /// <summary>
         /// Add new row to table
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
         Task AddAsync(T item);
+        /// <summary>
+        /// Add new rows to table
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        Task AddRangeAsync(ICollection<T> items);
         /// <summary>
         /// Update given row to database
         /// </summary>

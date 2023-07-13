@@ -4,13 +4,8 @@ using HealthCare.Core.Dto.Patients;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using HealthCare.Core.Dto.DiseasesDto;
+using HealthCare.Core.Exceptions;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients
 {
@@ -29,15 +24,15 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Patients
 
         public async Task<ICollection<PatientDto>> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
         {
-            var repo = await baseRepository.GetAsync();
+            ICollection<PatientDto> _mapper = new List<PatientDto>();
 
+            var repo = await baseRepository.GetListAsync();
             if (repo == null)
             {
                 logger.LogError($"{nameof(baseRepository)} is turn null or empty");
-                throw new ArgumentException("Hasta listesi veritabanından getirilemedi");
+                throw new ArgumentException("Birim listesi veritabanından getirilemedi");
             }
-
-            var _mapper = mapper.Map<ICollection<PatientDto>>(repo);
+            _mapper = mapper.Map<ICollection<PatientDto>>(repo);
 
             return _mapper;
 

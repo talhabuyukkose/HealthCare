@@ -2,15 +2,9 @@
 using HealthCare.Core.Cqrs.Queries.Appointments;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Dto.AppointmentsDto;
-using HealthCare.Core.Dto.DoctorsDto;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
 {
@@ -20,7 +14,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
         private readonly IBaseRepository<Appointment> baseRepository;
         private readonly IMapper mapper;
 
-        public GetAppointmentQueryHandler(ILogger<GetAppointmentQueryHandler> logger,IBaseRepository<Appointment> baseRepository,IMapper mapper)
+        public GetAppointmentQueryHandler(ILogger<GetAppointmentQueryHandler> logger, IBaseRepository<Appointment> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;
@@ -28,7 +22,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Appointments
         }
         public async Task<ICollection<AppointmentDto>> Handle(GetAppointmentQuery request, CancellationToken cancellationToken)
         {
-            var repo = await baseRepository.GetAsync();
+            var repo = await baseRepository.GetListAsync();
 
             if (repo == null)
             {

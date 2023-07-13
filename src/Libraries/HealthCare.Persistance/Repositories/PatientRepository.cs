@@ -17,23 +17,31 @@ namespace HealthCare.Persistance.Repositories
         {
         }
 
-        private IQueryable<Patient> GetIncluded()
+        private async Task<IQueryable<Patient>> IncludedAsync()
         {
-            return GetEntitiesUnDeleted().Include(x => x.Appointments).Include(x => x.Diseases);
+            var values = await GetEntitiesUnDeleted();
+
+            return values.Include(x => x.Appointments);
         }
-        public async Task<ICollection<Patient>> GetFilterIncludedAsync(Expression<Func<Patient, bool>> expression)
+        public async Task<ICollection<Patient>> GetListWithFilterIncludedAsync(Expression<Func<Patient, bool>> expression)
         {
-            return await GetIncluded().Where(expression).ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<Patient> GetFindIncludedAsync(Expression<Func<Patient, bool>> expression)
         {
-            return await GetIncluded().SingleAsync(expression);
+            var values = await IncludedAsync();
+
+            return await values.SingleAsync(expression);
         }
 
-        public async Task<ICollection<Patient>> GetIncludedAsync()
+        public async Task<ICollection<Patient>> GetListIncludedAsync()
         {
-            return await GetIncluded().ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.ToListAsync();
         }
     }
 }

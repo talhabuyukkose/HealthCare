@@ -1,14 +1,11 @@
 ﻿using HealthCare.Core.Domain.Common;
 using HealthCare.Core.Domain.Enums;
+using HealthCare.Core.Exceptions;
 using HealthCare.Core.Interfaces.Repositories;
 using HealthCare.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.EntityFrameworkCore.Internal;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Persistance.Repositories
 {
@@ -23,9 +20,22 @@ namespace HealthCare.Persistance.Repositories
             entities = context.Set<T>();
         }
 
-        protected IQueryable<T> GetEntitiesUnDeleted()
+        protected async Task<IQueryable<T>> GetEntitiesUnDeleted()
         {
-            return entities.Where(w => w.Status != Status.Deleted);
+            try
+            {
+                var entity = entities.Where(w => w.Status != Status.Deleted);
+
+                if (await entity.CountAsync() == 0)
+                {
+                    throw new DbNotFoundException($"{nameof(T)} has not value or exist an exception.");
+                }
+                return entity;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("BaseRepository", ex);
+            }
         }
         private async Task SaveAsync()
         {
@@ -38,14 +48,25 @@ namespace HealthCare.Persistance.Repositories
             await SaveAsync();
         }
 
+        public async Task AddRangeAsync(ICollection<T> item)
+        {
+            await entities.AddRangeAsync(item);
+
+            await SaveAsync();
+        }
+
         public async Task<bool> AnyAsync(Expression<Func<T, bool>> expression)
         {
-            return await GetEntitiesUnDeleted().AnyAsync(expression);
+            var values = await GetEntitiesUnDeleted();
+
+            return await values.AnyAsync(expression);
         }
 
         public async Task<int> CountAsync()
         {
-            return await GetEntitiesUnDeleted().CountAsync();
+            var values = await GetEntitiesUnDeleted();
+
+            return await values.CountAsync();
         }
 
         public async Task DeleteAsync(int id)
@@ -61,24 +82,32 @@ namespace HealthCare.Persistance.Repositories
             await SaveAsync();
         }
 
-        public async Task<ICollection<T>> GetAllAsync()
+        public async Task<ICollection<T>> GetListWithDeletedAsync()
         {
+            if (await entities.AnyAsync<T>())
+            {
+                throw new DbNotFoundException($"{nameof(T)} has not value or exist an exception.");
+            }
             return await entities.ToListAsync();
         }
-        public async Task<ICollection<T>> GetAsync()
+        public async Task<ICollection<T>> GetListAsync()
         {
-            return await GetEntitiesUnDeleted().ToListAsync();
+            var values = await GetEntitiesUnDeleted();
+
+            return await values.ToListAsync();
         }
         public async Task<ICollection<T>> GetWithFilterAsync(Expression<Func<T, bool>> expression)
         {
-            return await GetEntitiesUnDeleted().Where(expression).ToListAsync();
+            var values = await GetEntitiesUnDeleted();
+
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<T> GetFindAsync(Expression<Func<T, bool>> expression)
         {
-            return await GetEntitiesUnDeleted().SingleAsync(expression);
+            var values = await GetEntitiesUnDeleted();
+            return await values.SingleAsync(expression);
         }
-
         public async Task HardDeleteAsync(int id)
         {
             T? item = await GetFindAsync(find => find.Id == id);
@@ -113,7 +142,9 @@ namespace HealthCare.Persistance.Repositories
             limit = limit == 0 ? 50 : limit;
             limit = limit > 500 ? 500 : limit;
 
-            return await GetEntitiesUnDeleted().Skip(page * limit).Take(limit).OrderBy(order => order.Id).ToListAsync();
+            var values = await GetEntitiesUnDeleted();
+
+            return await values.Skip(page * limit).Take(limit).OrderBy(order => order.Id).ToListAsync();
         }
     }
 }

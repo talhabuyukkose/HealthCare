@@ -1,11 +1,4 @@
-﻿using HealthCare.Core.Domain.Entities;
-using HealthCare.Core.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HealthCare.Core.Domain.Enums;
 
 namespace HealthCare.Core.Dto.Patients
 {

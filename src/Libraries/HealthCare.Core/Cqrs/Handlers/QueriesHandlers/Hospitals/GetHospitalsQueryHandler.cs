@@ -2,15 +2,9 @@
 using HealthCare.Core.Cqrs.Queries.Hospitals;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Dto.HospitalsDto;
-using HealthCare.Core.Dto.Patients;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Hospitals
 {
@@ -20,7 +14,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Hospitals
         private readonly IBaseRepository<Hospital> baseRepository;
         private readonly IMapper mapper;
 
-        public GetHospitalsQueryHandler(ILogger<GetHospitalsQueryHandler> logger,IBaseRepository<Hospital> baseRepository,IMapper mapper)
+        public GetHospitalsQueryHandler(ILogger<GetHospitalsQueryHandler> logger, IBaseRepository<Hospital> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;
@@ -28,7 +22,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Hospitals
         }
         public async Task<ICollection<HospitalDto>> Handle(GetHospitalsQuery request, CancellationToken cancellationToken)
         {
-            var repo = await baseRepository.GetAsync();
+            var repo = await baseRepository.GetListAsync();
 
             if (repo == null)
             {

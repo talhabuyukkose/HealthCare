@@ -2,12 +2,7 @@
 using HealthCare.Core.Interfaces.Repositories;
 using HealthCare.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Persistance.Repositories
 {
@@ -16,23 +11,31 @@ namespace HealthCare.Persistance.Repositories
         public MedicalUnitRepository(PostgreDbContext context) : base(context)
         {
         }
-        private IQueryable<MedicalUnit> GetIncluded()
+        private async Task<IQueryable<MedicalUnit>> IncludedAsnyc()
         {
-            return GetEntitiesUnDeleted().Include(x => x.Appointments).Include(x => x.Doctors).Include(x=>x.Hospitals);
+            var values = await GetEntitiesUnDeleted();
+
+            return values.Include(x => x.Appointments).Include(x => x.Doctors).Include(x=>x.HospitalMedicalUnits).ThenInclude(x=>x.Hospital);
         }
-        public async Task<ICollection<MedicalUnit>> GetFilterIncludedAsync(Expression<Func<MedicalUnit, bool>> expression)
+        public async Task<ICollection<MedicalUnit>> GetListWithFilterIncludedAsync(Expression<Func<MedicalUnit, bool>> expression)
         {
-            return await GetIncluded().Where(expression).ToListAsync();
+            var values = await IncludedAsnyc();
+
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<MedicalUnit> GetFindIncludedAsync(Expression<Func<MedicalUnit, bool>> expression)
         {
-            return await GetIncluded().SingleAsync(expression);
+            var values = await IncludedAsnyc();
+
+            return await values.SingleAsync(expression);
         }
 
-        public async Task<ICollection<MedicalUnit>> GetIncludedAsync()
+        public async Task<ICollection<MedicalUnit>> GetListIncludedAsync()
         {
-            return await GetIncluded().ToListAsync();
+            var values = await IncludedAsnyc();
+
+            return await values.ToListAsync();
         }
     }
 }

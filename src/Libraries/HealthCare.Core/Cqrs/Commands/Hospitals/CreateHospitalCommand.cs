@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using HealthCare.Core.Domain.Entities;
+using MediatR;
 
 namespace HealthCare.Core.Cqrs.Commands.Hospitals
 {

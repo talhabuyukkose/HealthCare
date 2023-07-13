@@ -2,7 +2,6 @@
 using HealthCare.Core.Cqrs.Queries.Doctors;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Dto.DoctorsDto;
-using HealthCare.Core.Dto.Patients;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -23,7 +22,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Doctors
         }
         public async Task<ICollection<DoctorDto>> Handle(GetDoctorsQuery request, CancellationToken cancellationToken)
         {
-            var repo = await baseRepository.GetAsync();
+            var repo = await baseRepository.GetListAsync();
 
             if (repo == null)
             {

@@ -2,12 +2,7 @@
 using HealthCare.Core.Interfaces.Repositories;
 using HealthCare.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Persistance.Repositories
 {
@@ -16,23 +11,31 @@ namespace HealthCare.Persistance.Repositories
         public HospitalRepository(PostgreDbContext context) : base(context)
         {
         }
-        private IQueryable<Hospital> GetIncluded()
+        private async Task<IQueryable<Hospital>> IncludedAsync()
         {
-            return GetEntitiesUnDeleted().Include(x => x.Doctors).Include(x => x.MedicalUnits).Include(x => x.Appointments);
+            var values = await GetEntitiesUnDeleted();
+
+            return values.Include(x => x.Doctors).Include(x => x. HospitalMedicalUnits).ThenInclude(x => x.MedicalUnit).Include(x => x.Appointments);
         }
-        public async Task<ICollection<Hospital>> GetFilterIncludedAsync(Expression<Func<Hospital, bool>> expression)
+        public async Task<ICollection<Hospital>> GetListWithFilterIncludedAsync(Expression<Func<Hospital, bool>> expression)
         {
-            return await GetIncluded().Where(expression).ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<Hospital> GetFindIncludedAsync(Expression<Func<Hospital, bool>> expression)
         {
-            return await GetIncluded().SingleAsync(expression);
+            var values = await IncludedAsync();
+
+            return await values.SingleAsync(expression);
         }
 
-        public async Task<ICollection<Hospital>> GetIncludedAsync()
+        public async Task<ICollection<Hospital>> GetListIncludedAsync()
         {
-            return await GetIncluded().ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.ToListAsync();
         }
     }
 }

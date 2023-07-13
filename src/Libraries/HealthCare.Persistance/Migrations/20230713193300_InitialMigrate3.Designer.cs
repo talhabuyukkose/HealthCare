@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HealthCare.Persistance.Migrations
 {
     [DbContext(typeof(PostgreDbContext))]
-    [Migration("20230712075926_InitialMigrate")]
-    partial class InitialMigrate
+    [Migration("20230713193300_InitialMigrate3")]
+    partial class InitialMigrate3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,6 @@ namespace HealthCare.Persistance.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("DiseasePatient", b =>
-                {
-                    b.Property<int>("DiseasesId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("PatientsId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("DiseasesId", "PatientsId");
-
-                    b.HasIndex("PatientsId");
-
-                    b.ToTable("DiseasePatient");
-                });
 
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Appointment", b =>
                 {
@@ -85,49 +70,6 @@ namespace HealthCare.Persistance.Migrations
                     b.ToTable("Appointment");
                 });
 
-            modelBuilder.Entity("HealthCare.Core.Domain.Entities.Disease", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("BeginningDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("EndDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<short>("Level")
-                        .HasColumnType("smallint");
-
-                    b.Property<DateTime>("ModifiedDate")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Type")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Disease");
-                });
-
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Doctor", b =>
                 {
                     b.Property<int>("Id")
@@ -142,6 +84,9 @@ namespace HealthCare.Persistance.Migrations
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<int>("HospitalID")
+                        .HasColumnType("integer");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -161,6 +106,8 @@ namespace HealthCare.Persistance.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("HospitalID");
 
                     b.HasIndex("MedicalUnitID");
 
@@ -211,6 +158,38 @@ namespace HealthCare.Persistance.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Hospital");
+                });
+
+            modelBuilder.Entity("HealthCare.Core.Domain.Entities.HospitalMedicalUnit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("HospitalID")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MedicalUnitID")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("ModifiedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HospitalID");
+
+                    b.HasIndex("MedicalUnitID");
+
+                    b.ToTable("HospitalMedicalUnit");
                 });
 
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.MedicalUnit", b =>
@@ -311,21 +290,6 @@ namespace HealthCare.Persistance.Migrations
                     b.ToTable("Patient");
                 });
 
-            modelBuilder.Entity("DiseasePatient", b =>
-                {
-                    b.HasOne("HealthCare.Core.Domain.Entities.Disease", null)
-                        .WithMany()
-                        .HasForeignKey("DiseasesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("HealthCare.Core.Domain.Entities.Patient", null)
-                        .WithMany()
-                        .HasForeignKey("PatientsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Appointment", b =>
                 {
                     b.HasOne("HealthCare.Core.Domain.Entities.Doctor", "Doctor")
@@ -363,11 +327,38 @@ namespace HealthCare.Persistance.Migrations
 
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Doctor", b =>
                 {
+                    b.HasOne("HealthCare.Core.Domain.Entities.Hospital", "Hospital")
+                        .WithMany("Doctors")
+                        .HasForeignKey("HospitalID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("HealthCare.Core.Domain.Entities.MedicalUnit", "MedicalUnit")
                         .WithMany("Doctors")
                         .HasForeignKey("MedicalUnitID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Hospital");
+
+                    b.Navigation("MedicalUnit");
+                });
+
+            modelBuilder.Entity("HealthCare.Core.Domain.Entities.HospitalMedicalUnit", b =>
+                {
+                    b.HasOne("HealthCare.Core.Domain.Entities.Hospital", "Hospital")
+                        .WithMany("HospitalMedicalUnits")
+                        .HasForeignKey("HospitalID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HealthCare.Core.Domain.Entities.MedicalUnit", "MedicalUnit")
+                        .WithMany("HospitalMedicalUnits")
+                        .HasForeignKey("MedicalUnitID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hospital");
 
                     b.Navigation("MedicalUnit");
                 });
@@ -380,6 +371,10 @@ namespace HealthCare.Persistance.Migrations
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Hospital", b =>
                 {
                     b.Navigation("Appointments");
+
+                    b.Navigation("Doctors");
+
+                    b.Navigation("HospitalMedicalUnits");
                 });
 
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.MedicalUnit", b =>
@@ -387,6 +382,8 @@ namespace HealthCare.Persistance.Migrations
                     b.Navigation("Appointments");
 
                     b.Navigation("Doctors");
+
+                    b.Navigation("HospitalMedicalUnits");
                 });
 
             modelBuilder.Entity("HealthCare.Core.Domain.Entities.Patient", b =>

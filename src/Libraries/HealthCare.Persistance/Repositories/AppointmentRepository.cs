@@ -2,12 +2,7 @@
 using HealthCare.Core.Interfaces.Repositories;
 using HealthCare.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Persistance.Repositories
 {
@@ -16,23 +11,31 @@ namespace HealthCare.Persistance.Repositories
         public AppointmentRepository(PostgreDbContext context) : base(context)
         {
         }
-        private IQueryable<Appointment> GetIncluded()
+        private async Task<IQueryable<Appointment>> IncludedAsync()
         {
-            return GetEntitiesUnDeleted().Include(x => x.Patient).Include(x => x.Doctor).Include(x => x.MedicalUnit).Include(x => x.Hospital);
+            var values = await GetEntitiesUnDeleted();
+
+            return values.Include(x => x.Patient).Include(x => x.Doctor).Include(x => x.MedicalUnit).Include(x => x.Hospital);
         }
-        public async Task<ICollection<Appointment>> GetFilterIncludedAsync(Expression<Func<Appointment, bool>> expression)
+        public async Task<ICollection<Appointment>> GetListWithFilterIncludedAsync(Expression<Func<Appointment, bool>> expression)
         {
-            return await GetIncluded().Where(expression).ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.Where(expression).ToListAsync();
         }
 
         public async Task<Appointment> GetFindIncludedAsync(Expression<Func<Appointment, bool>> expression)
         {
-            return await GetIncluded().SingleAsync(expression);
+            var values = await IncludedAsync();
+
+            return await values.SingleAsync(expression);
         }
 
-        public async Task<ICollection<Appointment>> GetIncludedAsync()
+        public async Task<ICollection<Appointment>> GetListIncludedAsync()
         {
-            return await GetIncluded().ToListAsync();
+            var values = await IncludedAsync();
+
+            return await values.ToListAsync();
         }
     }
 }

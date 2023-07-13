@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using HealthCare.Core.Cqrs.Commands.Hospitals;
 using HealthCare.Core.Domain.Entities;
-using HealthCare.Core.Dto.HospitalsDto;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -14,7 +13,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Hospitals
         private readonly IBaseRepository<Hospital> baseRepository;
         private readonly IMapper mapper;
 
-        public UpdateHospitalCommandHandler(ILogger<UpdateHospitalCommandHandler> logger,IBaseRepository<Hospital> baseRepository,IMapper mapper)
+        public UpdateHospitalCommandHandler(ILogger<UpdateHospitalCommandHandler> logger, IBaseRepository<Hospital> baseRepository, IMapper mapper)
         {
             this.logger = logger;
             this.baseRepository = baseRepository;
@@ -35,7 +34,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Hospitals
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException("Update işlemi yapılamadı", ex);
+                throw new Exception("Update işlemi yapılamadı", ex);
             }
         }
     }

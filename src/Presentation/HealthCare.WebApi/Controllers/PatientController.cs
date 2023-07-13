@@ -26,15 +26,15 @@ namespace HealthCare.WebApi.Controllers
                 case true:
                     var queryIncluded = new GetPatientsIncludedQuery();
 
-                    var patientsIncluded = await mediator.Send(queryIncluded);
+                    var responseIncluded = await mediator.Send(queryIncluded);
 
-                    return Ok(patientsIncluded);
+                    return Ok(responseIncluded);
                 case false:
                     var query = new GetPatientsQuery();
 
-                    var patients = await mediator.Send(query);
+                    var response = await mediator.Send(query);
 
-                    return Ok(patients);
+                    return Ok(response);
             }
         }
 

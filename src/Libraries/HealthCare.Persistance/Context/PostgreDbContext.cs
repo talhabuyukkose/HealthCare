@@ -20,7 +20,9 @@ namespace HealthCare.Persistance.Context
             {
                 string appSettingPath = Directory.GetCurrentDirectory()
                 .Replace("libraries", "Presentation")
-                .Replace("persistance", "WebApi");
+                .Replace("Libraries", "Presentation")
+                .Replace("persistance", "WebApi")
+                .Replace("Persistance", "WebApi");
 
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                     .SetBasePath(appSettingPath)
@@ -38,13 +40,19 @@ namespace HealthCare.Persistance.Context
             {
                 entity.HasKey(e => e.Id);
                 entity.Property(e => e.FirstName).IsRequired();
-                entity.HasMany(e => e.Diseases).WithMany(many => many.Patients);
             });
 
             modelBuilder.Entity<MedicalUnit>(entity =>
             {
                 entity.HasKey(e => e.Id);
-                entity.HasMany(e => e.Hospitals).WithMany(many => many.MedicalUnits);
+            });
+
+
+            modelBuilder.Entity<HospitalMedicalUnit>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.HasOne(e => e.MedicalUnit).WithMany(many => many.HospitalMedicalUnits).HasForeignKey(e => e.MedicalUnitID);
+                entity.HasOne(e => e.Hospital).WithMany(many => many.HospitalMedicalUnits).HasForeignKey(e => e.HospitalID);
             });
 
             modelBuilder.Entity<Hospital>(entity =>
@@ -57,13 +65,9 @@ namespace HealthCare.Persistance.Context
                 entity.HasKey(e => e.Id);
                 entity.HasOne(e => e.MedicalUnit).WithMany(many => many.Doctors).HasForeignKey(e => e.MedicalUnitID);
                 entity.HasOne(e => e.Hospital).WithMany(many => many.Doctors).HasForeignKey(e => e.HospitalID);
-                entity.HasMany(e => e.Diseases).WithMany(many => many.Doctors);
             });
 
-            modelBuilder.Entity<Disease>(entity =>
-            {
-                entity.HasKey(e => e.Id);
-            });
+
 
             modelBuilder.Entity<Appointment>(entity =>
             {

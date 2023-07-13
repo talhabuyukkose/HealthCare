@@ -34,7 +34,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Patients
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException("Update işlemi yapılamadı", ex);
+                throw new Exception("Update işlemi yapılamadı", ex);
             }
         }
     }

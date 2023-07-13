@@ -1,15 +1,9 @@
 ﻿using AutoMapper;
-using HealthCare.Core.Cqrs.Commands.Diseases;
 using HealthCare.Core.Cqrs.Commands.Doctors;
 using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Doctors
 {
@@ -56,7 +50,7 @@ namespace HealthCare.Core.Cqrs.Handlers.CommandHandlers.Doctors
             }
             catch (Exception ex)
             {
-                throw new NotImplementedException("Update işlemi yapılamadı", ex);
+                throw new Exception("Update işlemi yapılamadı", ex);
             }
         }
     }

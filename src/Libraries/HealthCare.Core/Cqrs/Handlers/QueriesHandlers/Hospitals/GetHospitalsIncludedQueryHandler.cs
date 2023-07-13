@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HealthCare.Core.Cqrs.Queries.Hospitals;
+using HealthCare.Core.Domain.Entities;
 using HealthCare.Core.Dto.HospitalsDto;
 using HealthCare.Core.Interfaces.Repositories;
 using MediatR;
@@ -13,7 +14,10 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Hospitals
         private readonly IHospitalRepository hospitalRepository;
         private readonly IMapper mapper;
 
-        public GetHospitalsIncludedQueryHandler(ILogger<GetHospitalsIncludedQueryHandler> logger,IHospitalRepository hospitalRepository,IMapper mapper)
+        public GetHospitalsIncludedQueryHandler(
+            ILogger<GetHospitalsIncludedQueryHandler> logger,
+            IHospitalRepository hospitalRepository,
+            IMapper mapper)
         {
             this.logger = logger;
             this.hospitalRepository = hospitalRepository;
@@ -21,7 +25,7 @@ namespace HealthCare.Core.Cqrs.Handlers.QueriesHandlers.Hospitals
         }
         public async Task<ICollection<HospitalIncludedDto>> Handle(GetHospitalsIncludedQuery request, CancellationToken cancellationToken)
         {
-            var repohospitals = await hospitalRepository.GetIncludedAsync();
+            var repohospitals = await hospitalRepository.GetListIncludedAsync();
 
             if (repohospitals == null)
             {
