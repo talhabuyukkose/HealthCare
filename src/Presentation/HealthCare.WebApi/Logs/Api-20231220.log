@@ -1,0 +1,71 @@
+﻿2023-12-20 01:00:51.840 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 01:00:51.850 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 01:00:51.851 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 01:00:51.851 +03:00  INF  Hosting environment: Development
+2023-12-20 01:00:51.851 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 01:02:23.807 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 01:02:23.818 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 01:02:23.819 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 01:02:23.819 +03:00  INF  Hosting environment: Development
+2023-12-20 01:02:23.819 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 01:35:28.356 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 01:35:28.368 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 01:35:28.369 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 01:35:28.369 +03:00  INF  Hosting environment: Development
+2023-12-20 01:35:28.369 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 01:35:29.573 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger - null null
+2023-12-20 01:35:29.592 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger - 301 0 null 19.8836ms
+2023-12-20 01:35:29.624 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2023-12-20 01:35:29.659 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 34.8859ms
+2023-12-20 01:35:29.700 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - null null
+2023-12-20 01:35:29.700 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - null null
+2023-12-20 01:35:29.700 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - null null
+2023-12-20 01:35:30.031 +03:00  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-12-20 01:35:30.031 +03:00  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-12-20 01:35:30.032 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 331.9503ms
+2023-12-20 01:35:30.032 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - 200 144929 text/css 332.2472ms
+2023-12-20 01:35:30.062 +03:00  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-12-20 01:35:30.062 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 362.0284ms
+2023-12-20 01:35:30.170 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2023-12-20 01:35:30.181 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - null null
+2023-12-20 01:35:30.206 +03:00  INF  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2023-12-20 01:35:30.206 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/favicon-32x32.png - 200 628 image/png 25.129ms
+2023-12-20 01:35:30.242 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.5812ms
+2023-12-20 01:36:11.354 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 01:36:11.367 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 01:36:11.368 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 01:36:11.369 +03:00  INF  Hosting environment: Development
+2023-12-20 01:36:11.369 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 01:36:12.550 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2023-12-20 01:36:12.616 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 63.4808ms
+2023-12-20 01:36:12.817 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2023-12-20 01:36:12.860 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.2185ms
+2023-12-20 21:14:35.408 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 21:14:35.422 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 21:14:35.422 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 21:14:35.423 +03:00  INF  Hosting environment: Development
+2023-12-20 21:14:35.423 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 21:14:35.872 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2023-12-20 21:14:35.940 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 68.4866ms
+2023-12-20 21:14:35.983 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - null null
+2023-12-20 21:14:35.983 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - null null
+2023-12-20 21:14:35.983 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - null null
+2023-12-20 21:14:36.002 +03:00  INF  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2023-12-20 21:14:36.003 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui.css - 200 144929 text/css 19.7597ms
+2023-12-20 21:14:36.003 +03:00  INF  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-12-20 21:14:36.004 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 21.4258ms
+2023-12-20 21:14:36.006 +03:00  INF  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-12-20 21:14:36.006 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 23.5212ms
+2023-12-20 21:14:36.169 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2023-12-20 21:14:36.232 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.9737ms
+2023-12-20 21:14:50.534 +03:00  INF  Application is shutting down...
+2023-12-20 21:14:54.081 +03:00  INF  Now listening on: https://localhost:7106
+2023-12-20 21:14:54.095 +03:00  INF  Now listening on: http://localhost:5014
+2023-12-20 21:14:54.096 +03:00  INF  Application started. Press Ctrl+C to shut down.
+2023-12-20 21:14:54.096 +03:00  INF  Hosting environment: Development
+2023-12-20 21:14:54.096 +03:00  INF  Content root path: /Users/talhabuyukkose/Repos/Github/HealthCare/src/Presentation/HealthCare.WebApi
+2023-12-20 21:14:54.525 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/index.html - null null
+2023-12-20 21:14:54.588 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/index.html - 200 null text/html;charset=utf-8 63.6814ms
+2023-12-20 21:14:54.746 +03:00  INF  Request starting HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - null null
+2023-12-20 21:14:54.796 +03:00  INF  Request finished HTTP/2 GET https://localhost:7106/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.7319ms
+2023-12-20 21:14:56.088 +03:00  INF  Application is shutting down...

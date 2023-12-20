@@ -27,14 +27,14 @@ namespace HealthCare.Infrastructure
                 options.Scheduling.IgnoreDuplicates = true; // default: false
                 options.Scheduling.OverWriteExistingData = true; // default: true
             });
-            
+
             serviceCollection.AddQuartz(q =>
             {
                 q.SchedulerId = "SendEmailOrSmsJob";
                 q.SchedulerName = "SendEmailOrSmsJob";
                 q.UseJobFactory<JobFactory>();
                 q.UseMicrosoftDependencyInjectionJobFactory();
-                q.UseMicrosoftDependencyInjectionScopedJobFactory();
+                //q.UseMicrosoftDependencyInjectionScopedJobFactory();
             });
 
             serviceCollection.AddTransient<MyScheduler>();
