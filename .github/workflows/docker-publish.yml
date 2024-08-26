@@ -28,4 +28,4 @@ jobs:
       run: dotnet publish src/Presentation/HealthCare.WebApi/HealthCare.WebApi.csproj -c Release --output ./publish
 
     - name: Build Docker image
-      run: docker build -t my-dotnet-webapi:latest
+      run: docker build -t my-dotnet-webapi
