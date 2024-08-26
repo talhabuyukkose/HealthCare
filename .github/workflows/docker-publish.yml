@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '8.2' # .NET versiyonunu buraya yazın
+        dotnet-version: '8.0' # .NET versiyonunu buraya yazın
 
     - name: Build
       run: dotnet build --configuration Release 
