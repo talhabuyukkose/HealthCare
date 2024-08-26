@@ -1,0 +1,43 @@
+name: Deploy .NET Web API to Docker
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [closed]
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true && contains(['Monday', 'Tuesday', 'Wednesday', 'Thursday'], github.event.pull_request.merged_at | date('EEEE')) || github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '7.x' # .NET versiyonunu buraya yazın
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Publish
+      run: dotnet publish --configuration Release --output ./publish
+
+    - name: Build Docker image
+      run: docker build -t my-dotnet-webapi:latest .
+
+    - name: Run Docker container
+      env:
+        SERVER_URL: ${{ secrets.SERVER_URL }}
+        DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+      run: |
+        docker stop my-dotnet-webapi || true
+        docker rm my-dotnet-webapi || true
+        docker run -d --name my-dotnet-webapi -p 8080:80 \
+          -e SERVER_URL=${{ secrets.SERVER_URL }} \
+          -e DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }} \
+          my-dotnet-webapi:latest
