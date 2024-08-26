@@ -8,9 +8,11 @@ on:
     types: [closed]
 
 jobs:
-  deploy:
+  deployment:
     #if: github.event.pull_request.merged == true && contains(['Monday', 'Tuesday', 'Wednesday', 'Thursday'], github.event.pull_request.merged_at | date('EEEE')) || github.event_name == 'push'
     runs-on: ubuntu-latest
+    environment: production
+    concurrency: production
 
     steps:
     - name: Checkout code
@@ -26,6 +28,17 @@ jobs:
 
     - name: Publish
       run: dotnet publish src/Presentation/HealthCare.WebApi/HealthCare.WebApi.csproj -c Release --output ./publish
+    # - name: Build Docker image
+    #   run: docker build -t my-dotnet-webapi
 
-    - name: Build Docker image
-      run: docker build
+    # - name: Run Docker container
+    #   env:
+    #     SERVER_URL: ${{ secrets.SERVER_URL }}
+    #     DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
+    #   run: |
+    #     docker stop my-dotnet-webapi || true
+    #     docker rm my-dotnet-webapi || true
+    #     docker run -d --name my-dotnet-webapi -p 8080:80 \
+    #       -e SERVER_URL=${{ secrets.SERVER_URL }} \
+    #       -e DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }} \
+    #       my-dotnet-webapi:latest
