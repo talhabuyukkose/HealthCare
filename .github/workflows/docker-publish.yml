@@ -28,16 +28,4 @@ jobs:
       run: dotnet publish --configuration src/Presentation/HealthCare.WebApi/HealthCare.WebApi.csproj -c Release --output ./publish
 
     - name: Build Docker image
-      run: docker build -t my-dotnet-webapi:latest .
-
-    - name: Run Docker container
-      env:
-        SERVER_URL: ${{ secrets.SERVER_URL }}
-        DB_CONNECTION_STRING: ${{ secrets.DB_CONNECTION_STRING }}
-      run: |
-        docker stop my-dotnet-webapi || true
-        docker rm my-dotnet-webapi || true
-        docker run -d --name my-dotnet-webapi -p 8080:80 \
-          -e SERVER_URL=${{ secrets.SERVER_URL }} \
-          -e DB_CONNECTION_STRING=${{ secrets.DB_CONNECTION_STRING }} \
-          my-dotnet-webapi:latest
+      run: docker build -t my-dotnet-webapi:latest
