@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy:
-    if: github.event.pull_request.merged == true && contains(['Monday', 'Tuesday', 'Wednesday', 'Thursday'], github.event.pull_request.merged_at | date('EEEE')) || github.event_name == 'push'
+    #if: github.event.pull_request.merged == true && contains(['Monday', 'Tuesday', 'Wednesday', 'Thursday'], github.event.pull_request.merged_at | date('EEEE')) || github.event_name == 'push'
     runs-on: ubuntu-latest
 
     steps:
@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: '7.x' # .NET versiyonunu buraya yazın
+        dotnet-version: '8.2' # .NET versiyonunu buraya yazın
 
     - name: Build
       run: dotnet build --configuration Release 
